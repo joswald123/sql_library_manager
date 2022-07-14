@@ -15,9 +15,10 @@ function asyncHandler(cb){
 }
 
 /* GET books listing. */
-router.get('/books', asyncHandler(async(req, res) => {
+router.get('/', asyncHandler(async(req, res) => {
   const books = await Book.findAll();
   res.render("index", { books, title: "Books" });
+  
 }));
 
 
