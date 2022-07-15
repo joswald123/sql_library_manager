@@ -20,7 +20,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/books', book);
+app.use('/', book);
 
 
 const Sequelize = require('sequelize');

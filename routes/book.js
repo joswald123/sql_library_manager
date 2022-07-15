@@ -15,36 +15,34 @@ function asyncHandler(cb){
 }
 
 /* GET books listing. */
-router.get('/', asyncHandler(async(req, res) => {
+router.get('/books', asyncHandler(async(req, res) => {
   const books = await Book.findAll();
   res.render("index", { books, title: "Books" });
   
 }));
 
 /* Create a new book form. */
-router.get('/new_book', (req, res) => {
+router.get('/books/new', (req, res) => {
   res.render("new_book", { book: {}, title: "New Book" });
 });
 
 /* POST create a book. */
-router.post('/new_book', asyncHandler(async (req, res) => {
+router.post('/books/new', asyncHandler(async (req, res) => {
   res.redirect("/")
 }));
 
-
 /* Edit book form. */
-router.get("/:id/update-book", asyncHandler(async(req, res) => {
+router.get("/books/:id", asyncHandler(async(req, res) => {
   const book = await Book.findByPk(req.params.id);
-  res.render("/update-book", { book, title: book.title})
+  res.render("/books/update-book", { book, title: book.title})
 }));
 
 /* Update a book. */
-router.post('/:id/update-book', asyncHandler(async (req, res) => {
+router.post('/books/:id', asyncHandler(async (req, res) => {
   const book = await Book.findByPk(req.params.id);
   await book.update(req.body);
   res.redirect("/");
 }));
-
 
 
 
