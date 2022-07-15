@@ -28,14 +28,14 @@ router.get('/books/new', (req, res) => {
 
 /* POST create a book. */
 router.post('/books/new', asyncHandler(async (req, res) => {
-  const book = await Book.create(req.body)
+  await Book.create(req.body)
   res.redirect("/")
 }));
 
 /* Edit book form. */
 router.get("/books/:id", asyncHandler(async(req, res) => {
   const book = await Book.findByPk(req.params.id);
-  res.render("/books/update-book", { book, title: book.title})
+  res.render("update-book", { book, title: book.title})
 }));
 
 /* Update a book. */
