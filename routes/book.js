@@ -28,6 +28,7 @@ router.get('/books/new', (req, res) => {
 
 /* POST create a book. */
 router.post('/books/new', asyncHandler(async (req, res) => {
+  const book = await Book.create(req.body)
   res.redirect("/")
 }));
 
