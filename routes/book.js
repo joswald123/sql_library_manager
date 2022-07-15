@@ -21,6 +21,30 @@ router.get('/', asyncHandler(async(req, res) => {
   
 }));
 
+/* Create a new book form. */
+router.get('/new_book', (req, res) => {
+  res.render("new_book", { book: {}, title: "New Book" });
+});
+
+/* POST create a book. */
+router.post('/new_book', asyncHandler(async (req, res) => {
+  res.redirect("/")
+}));
+
+
+/* Edit book form. */
+router.get("/:id/update-book", asyncHandler(async(req, res) => {
+  const book = await Book.findByPk(req.params.id);
+  res.render("/update-book", { book, title: book.title})
+}));
+
+/* Update a book. */
+router.post('/:id/update-book', asyncHandler(async (req, res) => {
+  const book = await Book.findByPk(req.params.id);
+  await book.update(req.body);
+  res.redirect("/");
+}));
+
 
 
 
