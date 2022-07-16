@@ -15,7 +15,7 @@ to view and interact with your database.
 
 ![Page Screen](/public/images/updateBook.png)
 
-![Page Screen](/public/images/validationBook.png)
+![Page Screen](/public/images/validationPage.png)
 
 ### Quick Start
 1. Clone the repo-https://github.com/joswald123/sql_library_manager.git
