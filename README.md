@@ -9,9 +9,13 @@ A great opportunity to work of implementing and utilizing a database for data pe
 to view and interact with your database.
 
 
-![Page Screen](/assets/img/interactive-form.png)
+![Page Screen](/public/images/homePage.png)
 
-![Page Screen](/assets/img/interactive-form-access.png)
+![Page Screen](/public/images/createBook.png)
+
+![Page Screen](/public/images/updateBook.png)
+
+![Page Screen](/public/images/validationBook.png)
 
 ### Quick Start
 1. Clone the repo-https://github.com/joswald123/sql_library_manager.git

@@ -4,7 +4,7 @@ body {
 }
 
 a {
-  color: #019875;
+  color: #008793;
   text-decoration: none;
   font-weight: bold;
   transition: 0.4s;
@@ -16,7 +16,7 @@ a {
 
 a.button, input[type=submit] {
   color: white;
-  background: #019875;
+  background: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
   padding: 10px 14px 12px;
   font-size: 14px;
@@ -54,7 +54,8 @@ h2 {
 }
 
 th {
-  border-bottom: 2px solid #D8B493;
+  border-top: 2px solid #008793;
+  border-bottom: 2px solid #008793;
   text-align: left;
   padding: 5px 20px 5px 10px;
 }
@@ -64,10 +65,11 @@ tr {
 }
 
 tr:nth-child(2n) {
-  background: #E7E7E7;
+  background: #c3edf0;
 }
 
 td {
+  border-bottom: 2px solid #008793;
   padding: 5px 20px 5px 10px;
 }
 
