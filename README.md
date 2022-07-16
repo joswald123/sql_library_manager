@@ -1,6 +1,6 @@
 # SQL Library Manager
 
-JavaScript | Express | Node.js | Pug | CSS ORM Sequelize | SQlite | 
+JavaScript | Express | Node.js | Pug | CSS | ORM Sequelize | SQlite | 
 
 ### Description
 
